@@ -1,0 +1,129 @@
+ion-title {
+  height: auto;
+  ion-icon {
+    fill: #fff;
+    scale: 5;
+  }
+  .logo-title {
+    display: block;
+    margin: auto;
+    max-width: 10rem;
+    height: auto;
+  }
+}
+
+.item1 {
+  background: linear-gradient(0deg, #c3daff 0%, #0062ff 100%);
+}
+.item2 {
+  background: linear-gradient(0deg, #fb8383 0%, #ff0000 100%);
+}
+.item3 {
+  background: linear-gradient(0deg, #c37eff 0%, #a200ff 100%);
+}
+.item4 {
+  background: linear-gradient(0deg, #91ffbf 0%, #007540 100%);
+}
+.item5 {
+  background: linear-gradient(0deg, #ffe4e4 0%, #f9a9a9 100%);
+}
+svg {
+  fill: #0062ff;
+}
+
+.subtituloGrande {
+  font-size: 18px;
+}
+.textoGrande {
+  font-size: 32px;
+}	
+ion-button {
+  margin: auto;
+  flex-basis: 50px;
+}
+
+ion-text {
+  p {
+    color: #c9c9c9;
+    font-family: "gilroy-regular";
+  }
+  h1 {
+    font-family: "gilroy-bold";
+  }
+}
+
+ion-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: visible;
+  background-color: transparent;
+  padding-bottom: 16px;
+
+  div {
+    -webkit-box-shadow: 0px 3px 15px -3px rgba(255, 255, 255, 0.48);
+    -moz-box-shadow: 0px 3px 15px -3px rgba(0, 0, 0, 0.48);
+    box-shadow: 0px 3px 15px -3px rgba(0, 0, 0, 0.48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    ion-icon {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+  }
+}
+
+.tarjeta {
+  background: #fff;
+  border-radius: 10px;
+  margin: 10px;
+  min-width: 10rem;
+  width: 10rem;
+  height: 17rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  ion-icon {
+    font-size: 2rem;
+  }
+  ion-text {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  ion-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+      border-radius: 10px;
+    }
+  }
+  .card-content-bottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    p {
+      color: white;
+      font-family: "gilroy-regular";
+    }
+    strong {
+      color: white;
+      font-family: "gilroy-bold";
+      size: 32px;
+    }
+  }
+}

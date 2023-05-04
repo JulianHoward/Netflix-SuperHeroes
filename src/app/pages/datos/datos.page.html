@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content colpr="danger" [fullscreen]="true">
+  <div class="imagencontainer">
+    <ion-img [className]="'imagenPantalla'" [src]="'./../../../assets/'+heroe.imagePath"></ion-img>
+    <div class="contenido">
+      <ion-text>
+        <h4>{{heroe.alterEgo}}</h4>
+        <h1>{{heroe.name}}</h1>
+      </ion-text>
+      <div class="dentroDeLista">
+        <div>
+          <ion-icon src="../../../assets/icon/age.svg"></ion-icon>
+          <ion-text>
+            <p>{{edad}}</p>
+          </ion-text>
+        </div>
+        <div>
+          <ion-icon src="../../../assets/icon/weight.svg"></ion-icon>
+          <ion-text>
+            <p>{{heroe.caracteristics.weight.value}}</p>
+          </ion-text>
+        </div>
+        <div>
+          <ion-icon src="../../../assets/icon/height.svg"></ion-icon>
+          <ion-text>
+            <p>{{heroe.caracteristics.height.value}} {{heroe.caracteristics.height.unity}}</p>
+          </ion-text>
+        </div>
+        <div>
+          <ion-icon src="../../../assets/icon/universe.svg"></ion-icon>
+          <ion-text>
+            <p>{{heroe.caracteristics.universe}}</p>
+          </ion-text>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <ion-item>
+      <ion-text class="biography">
+        <p>{{heroe.biography}}</p>
+        <h2>Habilidades</h2>
+      </ion-text>
+    </ion-item>
+    <ion-list class="listaVirtudes">
+      <ion-item>
+        <p>Força</p>
+        <ion-progress-bar [value]="heroe.abilities.force/100" color="dark"></ion-progress-bar>
+      </ion-item>
+      <ion-item>
+        <p>Inteligencia</p>
+        <ion-progress-bar [value]="heroe.abilities.intelligence/100" color="dark"></ion-progress-bar>
+      </ion-item>
+      <ion-item>
+        <p>Agilidade</p>
+        <ion-progress-bar [value]="heroe.abilities.agility/100" color="dark"></ion-progress-bar>
+      </ion-item>
+      <ion-item>
+        <p>Resistencia</p>
+        <ion-progress-bar [value]="heroe.abilities.endurance/100" color="dark"></ion-progress-bar>
+      </ion-item>
+      <ion-item>
+        <p>Velocidad</p>
+        <ion-progress-bar [value]="heroe.abilities.velocity/100" color="dark"></ion-progress-bar>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-text class="biography">
+        <h2>Filmes</h2>
+      </ion-text>
+        </ion-item>
+  
+    <ion-list class="listaTarjeta">
+      <ion-card class="tarjeta" *ngFor="let movie of heroe.movies">
+        <ion-img [src]="'./../../../assets/'+movie"></ion-img>
+      </ion-card>
+    </ion-list>
+</ion-content>
